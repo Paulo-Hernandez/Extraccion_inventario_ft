@@ -1,0 +1,497 @@
+{
+  "activity_ids": {
+    "relation": "mail.activity",
+    "string": "Activities",
+    "type": "one2many"
+  },
+  "activity_state": {
+    "help": "Status based on activities\nOverdue: Due date is already passed\nToday: Activity date is today\nPlanned: Future activities.",
+    "string": "Activity State",
+    "type": "selection"
+  },
+  "activity_user_id": {
+    "relation": "res.users",
+    "string": "Responsible User",
+    "type": "many2one"
+  },
+  "activity_type_id": {
+    "relation": "mail.activity.type",
+    "string": "Next Activity Type",
+    "type": "many2one"
+  },
+  "activity_type_icon": {
+    "help": "Font awesome icon e.g. fa-tasks",
+    "string": "Activity Type Icon",
+    "type": "char"
+  },
+  "activity_date_deadline": {
+    "string": "Next Activity Deadline",
+    "type": "date"
+  },
+  "my_activity_date_deadline": {
+    "string": "My Activity Deadline",
+    "type": "date"
+  },
+  "activity_summary": {
+    "string": "Next Activity Summary",
+    "type": "char"
+  },
+  "activity_exception_decoration": {
+    "help": "Type of the exception activity on record.",
+    "string": "Activity Exception Decoration",
+    "type": "selection"
+  },
+  "activity_exception_icon": {
+    "help": "Icon to indicate an exception activity.",
+    "string": "Icon",
+    "type": "char"
+  },
+  "message_is_follower": {
+    "string": "Is Follower",
+    "type": "boolean"
+  },
+  "message_follower_ids": {
+    "relation": "mail.followers",
+    "string": "Followers",
+    "type": "one2many"
+  },
+  "message_partner_ids": {
+    "relation": "res.partner",
+    "string": "Followers (Partners)",
+    "type": "many2many"
+  },
+  "message_ids": {
+    "relation": "mail.message",
+    "string": "Messages",
+    "type": "one2many"
+  },
+  "has_message": {
+    "string": "Has Message",
+    "type": "boolean"
+  },
+  "message_needaction": {
+    "help": "If checked, new messages require your attention.",
+    "string": "Action Needed",
+    "type": "boolean"
+  },
+  "message_needaction_counter": {
+    "help": "Number of messages requiring action",
+    "string": "Number of Actions",
+    "type": "integer"
+  },
+  "message_has_error": {
+    "help": "If checked, some messages have a delivery error.",
+    "string": "Message Delivery error",
+    "type": "boolean"
+  },
+  "message_has_error_counter": {
+    "help": "Number of messages with delivery error",
+    "string": "Number of errors",
+    "type": "integer"
+  },
+  "message_attachment_count": {
+    "string": "Attachment Count",
+    "type": "integer"
+  },
+  "rating_ids": {
+    "relation": "rating.rating",
+    "string": "Ratings",
+    "type": "one2many"
+  },
+  "website_message_ids": {
+    "help": "Website communication history",
+    "relation": "mail.message",
+    "string": "Website Messages",
+    "type": "one2many"
+  },
+  "message_has_sms_error": {
+    "help": "If checked, some messages have a delivery error.",
+    "string": "SMS Delivery error",
+    "type": "boolean"
+  },
+  "name": {
+    "string": "Reference",
+    "type": "char"
+  },
+  "origin": {
+    "help": "Reference of the document",
+    "string": "Source Document",
+    "type": "char"
+  },
+  "note": {
+    "string": "Notes",
+    "type": "html"
+  },
+  "backorder_id": {
+    "help": "If this shipment was split, then this field links to the shipment which contains the already processed part.",
+    "relation": "stock.picking",
+    "string": "Back Order of",
+    "type": "many2one"
+  },
+  "backorder_ids": {
+    "relation": "stock.picking",
+    "string": "Back Orders",
+    "type": "one2many"
+  },
+  "return_id": {
+    "help": "If this picking was created as a return of another picking, this field links to the original picking.",
+    "relation": "stock.picking",
+    "string": "Return of",
+    "type": "many2one"
+  },
+  "return_ids": {
+    "relation": "stock.picking",
+    "string": "Returns",
+    "type": "one2many"
+  },
+  "return_count": {
+    "string": "# Returns",
+    "type": "integer"
+  },
+  "move_type": {
+    "help": "It specifies goods to be deliver partially or all at once",
+    "string": "Shipping Policy",
+    "type": "selection"
+  },
+  "state": {
+    "help": " * Draft: The transfer is not confirmed yet. Reservation doesn't apply.\n * Waiting another operation: This transfer is waiting for another operation before being ready.\n * Waiting: The transfer is waiting for the availability of some products.\n(a) The shipping policy is \"As soon as possible\": no product could be reserved.\n(b) The shipping policy is \"When all products are ready\": not all the products could be reserved.\n * Ready: The transfer is ready to be processed.\n(a) The shipping policy is \"As soon as possible\": at least one product has been reserved.\n(b) The shipping policy is \"When all products are ready\": all product have been reserved.\n * Done: The transfer has been processed.\n * Cancelled: The transfer has been cancelled.",
+    "string": "Status",
+    "type": "selection"
+  },
+  "group_id": {
+    "relation": "procurement.group",
+    "string": "Procurement Group",
+    "type": "many2one"
+  },
+  "priority": {
+    "help": "Products will be reserved first for the transfers with the highest priorities.",
+    "string": "Priority",
+    "type": "selection"
+  },
+  "scheduled_date": {
+    "help": "Scheduled time for the first part of the shipment to be processed. Setting manually a value here would set it as expected date for all the stock moves.",
+    "string": "Scheduled Date",
+    "type": "datetime"
+  },
+  "date_deadline": {
+    "help": "Date Promise to the customer on the top level document (SO/PO)",
+    "string": "Deadline",
+    "type": "datetime"
+  },
+  "has_deadline_issue": {
+    "help": "Is late or will be late depending on the deadline and scheduled date",
+    "string": "Is late",
+    "type": "boolean"
+  },
+  "date": {
+    "help": "Creation Date, usually the time of the order",
+    "string": "Creation Date",
+    "type": "datetime"
+  },
+  "date_done": {
+    "help": "Date at which the transfer has been processed or cancelled.",
+    "string": "Date of Transfer",
+    "type": "datetime"
+  },
+  "delay_alert_date": {
+    "string": "Delay Alert Date",
+    "type": "datetime"
+  },
+  "json_popover": {
+    "string": "JSON data for the popover widget",
+    "type": "char"
+  },
+  "location_id": {
+    "relation": "stock.location",
+    "string": "Source Location",
+    "type": "many2one"
+  },
+  "location_dest_id": {
+    "relation": "stock.location",
+    "string": "Destination Location",
+    "type": "many2one"
+  },
+  "move_ids": {
+    "relation": "stock.move",
+    "string": "Stock Moves",
+    "type": "one2many"
+  },
+  "move_ids_without_package": {
+    "relation": "stock.move",
+    "string": "Stock move",
+    "type": "one2many"
+  },
+  "has_scrap_move": {
+    "string": "Has Scrap Moves",
+    "type": "boolean"
+  },
+  "picking_type_id": {
+    "relation": "stock.picking.type",
+    "string": "Operation Type",
+    "type": "many2one"
+  },
+  "picking_type_code": {
+    "string": "Type of Operation",
+    "type": "selection"
+  },
+  "picking_type_entire_packs": {
+    "help": "If ticked, you will be able to select entire packages to move",
+    "string": "Move Entire Packages",
+    "type": "boolean"
+  },
+  "use_create_lots": {
+    "help": "If this is checked only, it will suppose you want to create new Lots/Serial Numbers, so you can provide them in a text field. ",
+    "string": "Create New Lots/Serial Numbers",
+    "type": "boolean"
+  },
+  "use_existing_lots": {
+    "help": "If this is checked, you will be able to choose the Lots/Serial Numbers. You can also decide to not put lots in this operation type.  This means it will create stock with no lot or not put a restriction on the lot taken. ",
+    "string": "Use Existing Lots/Serial Numbers",
+    "type": "boolean"
+  },
+  "hide_picking_type": {
+    "string": "Hide Picking Type",
+    "type": "boolean"
+  },
+  "partner_id": {
+    "relation": "res.partner",
+    "string": "Contact",
+    "type": "many2one"
+  },
+  "company_id": {
+    "relation": "res.company",
+    "string": "Company",
+    "type": "many2one"
+  },
+  "user_id": {
+    "relation": "res.users",
+    "string": "Responsible",
+    "type": "many2one"
+  },
+  "move_line_ids": {
+    "relation": "stock.move.line",
+    "string": "Operations",
+    "type": "one2many"
+  },
+  "move_line_ids_without_package": {
+    "relation": "stock.move.line",
+    "string": "Operations without package",
+    "type": "one2many"
+  },
+  "move_line_exist": {
+    "help": "Check the existence of pack operation on the picking",
+    "string": "Has Pack Operations",
+    "type": "boolean"
+  },
+  "has_packages": {
+    "help": "Check the existence of destination packages on move lines",
+    "string": "Has Packages",
+    "type": "boolean"
+  },
+  "show_check_availability": {
+    "help": "Technical field used to compute whether the button \"Check Availability\" should be displayed.",
+    "string": "Show Check Availability",
+    "type": "boolean"
+  },
+  "show_allocation": {
+    "help": "Technical Field used to decide whether the button \"Allocation\" should be displayed.",
+    "string": "Show Allocation",
+    "type": "boolean"
+  },
+  "owner_id": {
+    "help": "When validating the transfer, the products will be assigned to this owner.",
+    "relation": "res.partner",
+    "string": "Assign Owner",
+    "type": "many2one"
+  },
+  "printed": {
+    "string": "Printed",
+    "type": "boolean"
+  },
+  "signature": {
+    "help": "Signature",
+    "string": "Signature",
+    "type": "binary"
+  },
+  "is_signed": {
+    "string": "Is Signed",
+    "type": "boolean"
+  },
+  "is_locked": {
+    "help": "When the picking is not done this allows changing the initial demand. When the picking is done this allows changing the done quantities.",
+    "string": "Is Locked",
+    "type": "boolean"
+  },
+  "product_id": {
+    "relation": "product.product",
+    "string": "Product",
+    "type": "many2one"
+  },
+  "lot_id": {
+    "relation": "stock.lot",
+    "string": "Lot/Serial Number",
+    "type": "many2one"
+  },
+  "show_operations": {
+    "help": "If this checkbox is ticked, the pickings lines will represent detailed stock operations. If not, the picking lines will represent an aggregate of detailed stock operations.",
+    "string": "Show Detailed Operations",
+    "type": "boolean"
+  },
+  "show_reserved": {
+    "help": "If this checkbox is ticked, Odoo will automatically pre-fill the detailed operations with the corresponding products, locations and lot/serial numbers. For moves that are returns, the detailed operations will always be prefilled, regardless of this option.",
+    "string": "Pre-fill Detailed Operations",
+    "type": "boolean"
+  },
+  "show_lots_text": {
+    "string": "Show Lots Text",
+    "type": "boolean"
+  },
+  "has_tracking": {
+    "string": "Has Tracking",
+    "type": "boolean"
+  },
+  "package_level_ids": {
+    "relation": "stock.package_level",
+    "string": "Package Level",
+    "type": "one2many"
+  },
+  "package_level_ids_details": {
+    "relation": "stock.package_level",
+    "string": "Package Level Ids Details",
+    "type": "one2many"
+  },
+  "products_availability": {
+    "help": "Latest product availability status of the picking",
+    "string": "Product Availability",
+    "type": "char"
+  },
+  "products_availability_state": {
+    "string": "Products Availability State",
+    "type": "selection"
+  },
+  "show_set_qty_button": {
+    "string": "Show Set Qty Button",
+    "type": "boolean"
+  },
+  "show_clear_qty_button": {
+    "string": "Show Clear Qty Button",
+    "type": "boolean"
+  },
+  "picking_properties": {
+    "string": "Properties",
+    "type": "properties"
+  },
+  "id": {
+    "string": "ID",
+    "type": "integer"
+  },
+  "display_name": {
+    "string": "Display Name",
+    "type": "char"
+  },
+  "create_uid": {
+    "relation": "res.users",
+    "string": "Created by",
+    "type": "many2one"
+  },
+  "create_date": {
+    "string": "Created on",
+    "type": "datetime"
+  },
+  "write_uid": {
+    "relation": "res.users",
+    "string": "Last Updated by",
+    "type": "many2one"
+  },
+  "write_date": {
+    "string": "Last Updated on",
+    "type": "datetime"
+  },
+  "country_code": {
+    "help": "The ISO country code in two chars. \nYou can use this field for quick search.",
+    "string": "Country Code",
+    "type": "char"
+  },
+  "pos_session_id": {
+    "relation": "pos.session",
+    "string": "Pos Session",
+    "type": "many2one"
+  },
+  "pos_order_id": {
+    "relation": "pos.order",
+    "string": "Pos Order",
+    "type": "many2one"
+  },
+  "purchase_id": {
+    "relation": "purchase.order",
+    "string": "Purchase Orders",
+    "type": "many2one"
+  },
+  "sale_id": {
+    "relation": "sale.order",
+    "string": "Sales Order",
+    "type": "many2one"
+  },
+  "l10n_cl_delivery_guide_reason": {
+    "string": "Reason of the Transfer",
+    "type": "selection"
+  },
+  "l10n_cl_draft_status": {
+    "string": "L10N Cl Draft Status",
+    "type": "boolean"
+  },
+  "l10n_cl_is_return": {
+    "string": "L10N Cl Is Return",
+    "type": "boolean"
+  },
+  "l10n_latam_document_type_id": {
+    "relation": "l10n_latam.document.type",
+    "string": "Document Type",
+    "type": "many2one"
+  },
+  "l10n_latam_document_number": {
+    "string": "Delivery Guide Number",
+    "type": "char"
+  },
+  "l10n_cl_sii_barcode": {
+    "help": "This XML contains the portion of the DTE XML that should be coded in PDF417 and printed in the invoice barcode should be present in the printed invoice report to be valid",
+    "string": "SII Barcode",
+    "type": "char"
+  },
+  "l10n_cl_dte_status": {
+    "help": "Status of sending the DTE to the SII:\n            - Not sent: the DTE has not been sent to SII but it has created.\n            - Ask For Status: The DTE is asking for its status to the SII.\n            - Accepted: The DTE has been accepted by SII.\n            - Accepted With Objections: The DTE has been accepted with objections by SII.\n            - Rejected: The DTE has been rejected by SII.\n            - Cancelled: The DTE has been deleted by the user.\n            - Manual: The DTE is sent manually, i.e.: the DTE will not be sending manually.",
+    "string": "SII DTE status",
+    "type": "selection"
+  },
+  "l10n_cl_dte_partner_status": {
+    "help": "\n            Status of sending the DTE to the partner:\n            - Not sent: the DTE has not been sent to the partner but it has sent to SII.\n            - Sent: The DTE has been sent to the partner.",
+    "string": "Partner DTE status",
+    "type": "selection"
+  },
+  "l10n_cl_sii_send_file": {
+    "relation": "ir.attachment",
+    "string": "SII Send file",
+    "type": "many2one"
+  },
+  "l10n_cl_dte_file": {
+    "relation": "ir.attachment",
+    "string": "DTE file",
+    "type": "many2one"
+  },
+  "l10n_cl_sii_send_ident": {
+    "string": "SII Send Identification(Track ID)",
+    "type": "text"
+  },
+  "x_studio_factura_ref": {
+    "string": "Factura Ref",
+    "type": "char"
+  },
+  "x_studio_char_field_1om_1i9cej334": {
+    "string": "Nuevo Texto",
+    "type": "char"
+  },
+  "x_studio_total_recepcion": {
+    "string": "Total Recepcion",
+    "type": "float"
+  }
+}

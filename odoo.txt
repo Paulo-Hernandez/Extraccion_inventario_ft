@@ -1,0 +1,4 @@
+url=https://carnes-a-punto.odoo.com/
+db=apunto1-piloto-carnes-a-punto-main-12733429
+username=apunto@ingmetrica.cl
+password=Carnesapunto123

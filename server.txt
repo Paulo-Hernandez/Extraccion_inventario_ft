@@ -1,0 +1,4 @@
+server=DESKTOP-7JUKUGD\SQLEXPRESS
+database=BI_INVENTARIO_FT_FOODS
+username_sql=sa
+password_sql=12345678

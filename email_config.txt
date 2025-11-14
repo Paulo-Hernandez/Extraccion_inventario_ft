@@ -1,0 +1,6 @@
+smtp_server=mail.ingmetrica.cl 
+smtp_port=465
+from_addr=soporte_informatico@ingmetrica.cl
+to_addrs=apunto@ingmetrica.cl;paulo@ingmetrica.cl
+smtp_user=soporte_informatico@ingmetrica.cl
+smtp_pass=Alhue@8897Info
